@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Product</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Smile and Sunshine Staff Management
+        <img
+                        src="https://odoocdn.com/openerp_website/static/src/img/icons/blue_rocket.svg"
+                        width="80px"
+                        class="mt-n8 me-n5"
+                        alt="rocket"
+                        loading="lazy" /> 
+        </h1>
+        <input type="text" id="searchBar" placeholder="Search...">
+    </header>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <h2>Staff Menu</h2>
+            <ul>
+                <li><a href="Main.html">Add Product</a></li>
+                <li><a href="MaterialInfo.html">Add Material</a></li>
+                <li><a href="update.html">Update Order</a></li>
+                <li><a href="Generate.html">Generate Report</a></li>
+                <li><a href="Delete.html">Delete Product</a></li>
+            </ul>
+        </aside>
+
+        <main class="content2">
+            <h2>Delete product</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Order Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable">
+                    <tr>
+                        <td>2</td>
+                        <td>Wooden Aeroplane</td>
+                        <td>✅ No orders</td>
+                        <td><button class="delete-btn" onclick="confirmDelete(this, 101, true)">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Tesla Cyber Truck</td>
+                        <td>❌ Has existing orders</td>
+                        <td><button class="delete-btn disabled" onclick="alert('This product has an existing orders and cannot be deleted.')">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+</body></html>

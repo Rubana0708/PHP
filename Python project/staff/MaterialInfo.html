@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Material Entry Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <header class="header">
+        <h1>Smile and Sunshine Staff Management<img
+                        src="https://odoocdn.com/openerp_website/static/src/img/icons/blue_rocket.svg"
+                        width="80px"
+                        class="mt-n8 me-n5"
+                        alt="rocket"
+                        loading="lazy" /> 
+          </h1>
+        
+        <input type="text" id="searchBar" placeholder="Search...">
+    </header>
+
+    <div class="container">
+    
+        <aside class="sidebar">
+            <h2>Staff Menu</h2>
+            <ul>
+                <li><a href="Main.html">Add Product</a></li>
+                <li><a href="MaterialInfo.html">Add Material</a></li>
+                <li><a href="update.html">Update Order</a></li>
+                <li><a href="Generate.html">Generate Report</a></li>
+                <li><a href="Delete.html">Delete Product</a></li>
+            </ul>
+        </aside>
+        
+    <div class="main">
+        <h2>Material Entry Form</h2>
+        <form id="materialForm">
+           
+           <fieldset>
+           <legend>Entry Form</legend>
+            <label for="materailName">Material Name:</label>
+            <input type="text" id="materailname" name="materialName"><br />
+
+            <label for="physicalQuantity">Physical Quantity:</label>
+            <input type="number" id="physicalQuantity" name="physicalQuantity" min="1" step="1 " required oninput="this.value = Math.max(1, this.value)"><br />
+
+            <label for="reservedQuantity">Reserved Quantity:</label>
+            <input type="number" id="reservedQuantity" name="reservedQuantity" min="1" step="1 " required oninput="this.value = Math.max(1, this.value)"><br />
+
+            <label for="unit">Unit:</label>
+            <input type="text" id="unit" name="unit"><br />
+
+            <label for="reorderLevel">Re-Order Level:</label>
+            <input type="number" id="reorderLevel" name="reorderLevel" min="0"><br />
+            </fieldset>
+
+            <button type="submit">Add Material</button>
+        </form>
+    </div>
+</body></html>

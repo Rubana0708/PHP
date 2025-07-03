@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Reports</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <header class="header">
+        <h1>Smile and Sunshine Staff Management
+          <img
+                        src="https://odoocdn.com/openerp_website/static/src/img/icons/blue_rocket.svg"
+                        width="80px"
+                        class="mt-n8 me-n5"
+                        alt="rocket"
+                        loading="lazy" /> 
+        
+        </h1>
+        <input type="text" id="searchBar" placeholder="Search...">
+    </header>
+
+    <div class="container">
+    
+        <aside class="sidebar">
+            <h2>Staff Menu</h2>
+            <ul>
+                <li><a href="Main.html">Add Product</a></li>
+                <li><a href="MaterialInfo.html">Add Material</a></li>
+                <li><a href="update.html">Update Order</a></li>
+                <li><a href="Generate.html">Generate Report</a></li>
+                <li><a href="Delete.html">Delete Product</a></li>
+            </ul>
+        </aside>
+        
+    <main class="content1">
+        <h2>Order Reports</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Product Name</th>
+                    <th>Product Image</th>
+                    <th>Order Quantity</th>
+                    <th>Price ($)</th>
+                    <th>Total Sales ($)</th>
+                </tr>
+            </thead>
+            <tbody id="reportTable">
+                <tr>
+                    <td>1</td>
+                    <td>Leather Sheet</td>
+                    <td><img src="6.jpg" width="100px" height="100px"></td>
+                    <td>100</td>
+                    <td>150</td>
+                    <td class="total-sales">25</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Cotton wool</td>
+                    <td><img src="7.jpg" width="100px" height="100px"></td>
+                    <td>100</td>
+                    <td>120</td>
+                    <td class="total-sales">25</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Wooden Planks</td>
+                    <td><img src="8.jpg" width="100px" height="100px"></td>
+                    <td>100</td>
+                    <td>120</td>
+                    <td class="total-sales">25</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>ABS Cement</td>
+                    <td><img src="9.jpg" width="100px" height="100px"></td>
+                    <td>100</td>
+                    <td>130</td>
+                    <td class="total-sales">25</td>
+                </tr>
+
+
+                <tr>
+                    <td>5</td>
+                    <td>Spiral Nails</td>
+                    <td><img src="10.jpg" width="100px" height="100px"></td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td class="total-sales">25</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+ </body>
+</html>

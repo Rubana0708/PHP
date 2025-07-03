@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Order Records</title>
+    <link rel="stylesheet" href="customerVieworder.css">
+</head>
+<body>
+<main>
+    <div class="container">
+        <header class="header">
+            <h1>
+                Smile & Sunshine Toy Co. Ltd.
+                <img
+                        src="https://odoocdn.com/openerp_website/static/src/img/icons/blue_rocket.svg"
+                        width="80px"
+                        class="mt-n8 me-n5"
+                        alt="rocket"
+                        loading="lazy" />
+            </h1>
+            <input type="text" id="searchBar" placeholder="Search..." />
+        </header>
+
+
+        <aside class="sidebar">
+            <h2>Customer Menu</h2>
+            <ul>
+                <li><a href="customerOrder.html">Place Order</a></li>
+                <li><a href="customerVieworder.html">View Order</a></li>
+                <li><a href="customerDelete.html">Delete Product</a></li>
+                <li><a href="updateprofile.html">Update Profile</a></li>
+
+            </ul>
+
+        </aside>
+        <h1>View Order Records</h1>
+
+        <div class="sort-controls">
+
+                <label>Sort By First Column:</label>
+                <select id="sortColumn1">
+                    <option value="orderId">Order ID</option>
+                    <option value="orderDate">Order Date</option>
+                    <option value="customerId">Customer ID</option>
+                    <option value="productId">Product ID</option>
+                    <option value="orderQuantity">Order Quantity</option>
+                    <option value="orderCost">Order Cost</option>
+                    <option value="deliveryDate">Order Delivery Date</option>
+                    <option value="orderStatus">Order Status</option>
+                </select>
+                <label>Sort By Second Column:</label>
+                <select id="sortColumn2">
+                    <option value="none">None</option>
+                    <option value="orderId">Order ID</option>
+                    <option value="orderDate">Order Date</option>
+                    <option value="customerId">Customer ID</option>
+                    <option value="productId">Product ID</option>
+                    <option value="orderQuantity">Order Quantity</option>
+                    <option value="orderCost">Order Cost</option>
+                    <option value="deliveryDate">Order Delivery Date</option>
+                    <option value="orderStatus">Order Status</option>
+                </select>
+            <br>
+            <br>
+                <label>Order:</label>
+                <input type="radio" name="sortOrder" value="asc" checked> Ascending
+                <input type="radio" name="sortOrder" value="desc"> Descending
+                <button onclick="sortTable()">Sort</button>
+
+        </div>
+        <table id="orderTable">
+            <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Order Date</th>
+                <th>Customer ID</th>
+                <th>Product ID</th>
+                <th>Order Quantity</th>
+                <th>Order Cost</th>
+                <th>Order Delivery Date</th>
+                <th>Order Status</th>
+            </tr>
+            </thead>
+            <tbody id="orderTableBody">
+            <tr>
+                <td>ORD001</td>
+                <td>2025-01-21</td>
+                <td>CUS123</td>
+                <td>1</td>
+                <td>1</td>
+                <td>$150.00</td>
+                <td>2025-01-24</td>
+                <td>Complete</td>
+            </tr>
+            <tr>
+                <td>ORD002</td>
+                <td>2025-03-20</td>
+                <td>CUS123</td>
+                <td>3</td>
+                <td>2</td>
+                <td>$240.00</td>
+                <td>2025-03-23</td>
+                <td>Pending</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<script>
+    function sortTable() {
+        const sortColumn1 = document.getElementById('sortColumn1').value;
+        const sortColumn2 = document.getElementById('sortColumn2').value;
+        const sortOrder = document.querySelector('input[name="sortOrder"]:checked').value;
+        const tbody = document.getElementById('orderTableBody');
+        const rows = Array.from(tbody.getElementsByTagName('tr'));
+
+        const columnMap = {
+            orderId: 0,
+            orderDate: 1,
+            customerId: 2,
+            productId: 3,
+            orderQuantity: 4,
+            orderCost: 5,
+            deliveryDate: 6,
+            orderStatus: 7
+        };
+
+        const getCellValue = (row, colIndex, colKey) => {
+            const value = row.cells[colIndex].textContent;
+            if (colKey === 'orderCost') {
+                return parseFloat(value.replace('$', '')) || 0;
+            } else if (colKey === 'orderQuantity' || colKey === 'productId') {
+                return parseInt(value) || 0;
+            } else if (colKey === 'orderDate' || colKey === 'deliveryDate') {
+                return new Date(value).getTime() || 0;
+            }
+            return value.toLowerCase();
+        };
+
+        rows.sort((a, b) => {
+            let valA1 = getCellValue(a, columnMap[sortColumn1], sortColumn1);
+            let valB1 = getCellValue(b, columnMap[sortColumn1], sortColumn1);
+            let result = 0;
+
+            if (valA1 < valB1) result = -1;
+            else if (valA1 > valB1) result = 1;
+
+            if (result === 0 && sortColumn2 !== 'none') {
+                let valA2 = getCellValue(a, columnMap[sortColumn2], sortColumn2);
+                let valB2 = getCellValue(b, columnMap[sortColumn2], sortColumn2);
+                if (valA2 < valB2) result = -1;
+                else if (valA2 > valB2) result = 1;
+            }
+
+            return sortOrder === 'asc' ? result : -result;
+        });
+
+        tbody.innerHTML = '';
+        rows.forEach(row => tbody.appendChild(row));
+    }
+</script>
+
+</body>
+</html>

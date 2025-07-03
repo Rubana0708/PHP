@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Ariel, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: auto;
+    padding: 20px;
+    
+}
+
+.container{
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1{ 
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+   /* font-size: 1.8em;*/
+}
+
+
+.imgcontainter {
+    text-align: center;;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    
+}
+
+
+
+img {
+    border-radius: 50%;
+    border: 2px;
+    object-fit: cover;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 0.9em;
+}
+
+
+.uprofile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #34495e;
+    
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+    
+}
+
+input:placeholder {
+    color: #999;
+}
+
+
+button {
+    padding: 12px;
+    background-color: #525bec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    width: 200px;
+    align-self: center;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #525bec;
+}
+
+.cancel {
+    background-color: #95a5a6;
+    color: white;
+    
+}
+
+.cancel:hover {
+    background-color: #7f8c8d;
+}
+
+.save{
+    background-color: #4046ae;
+    color: white;
+    align-self: flex-start;
+}
+
+.save:hover {
+    background-color: #525bec;
+}
+
+
+

@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #f4f7f9;
+    padding: 20px;
+    
+}
+.header {
+     text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195a8), color-stop(100, #70eaff));
+    background: -moz-linear-gradient(top left, #205555 0%, #70eaff 100%);
+    background: -ms-linear-gradient(top left, #205555 0%, #70eaff 100%);
+    background: -o-linear-gradient(top left, #205555 0%, #70eaff 100%);
+    background: linear-gradient(to bottom right, #205555 0%, #70eaff 100%);
+    border-radius: 5px 5px 0 0;
+    padding: 20px;
+    color: #f6f6f6;
+    
+}
+
+
+ h1{
+    color: #2c3e50;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+     
+    
+}
+
+#searchBar {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 600px;
+    margin-right: 20px;
+    z-index: 5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    margin-left: 200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #99c1c7 ;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    overflow-y: auto;
+    flex-shrink: 0;
+    
+}
+
+.sidebar h2 {
+    text-align: center;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+    color: #2c3e50;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+
+
+.delete-table{
+    width: 60%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    margin-left: 300px;
+}
+.delete-table th,
+.delete-table td{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd
+}
+
+
+
+.delete-table th {
+    background-color: #7abcc6;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.delete-btn {
+     background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.delete-btn:hover {
+    background-color: #c82333;
+}

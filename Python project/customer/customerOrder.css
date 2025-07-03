@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #f4f7f9;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-left: 200px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#searchBar {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 600px;
+    margin-right: 20px;
+    z-index: 5;
+}
+
+
+
+
+.title {
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195a8), color-stop(100, #70eaff));
+    background: -moz-linear-gradient(top left, #be5a5a 0%, #ff7070 100%);
+    background: -ms-linear-gradient(top left, #be5a5a 0%, #ff7070 100%);
+    background: -o-linear-gradient(top left, #be5a5a 0%, #ff7070 100%);
+    background: linear-gradient(to bottom right, #be5a5a 0%, #ff7070 100%);
+    border-radius: 9000px 9000px 0 0;
+    padding: 5px;
+    color: #f6f6f6;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195a8), color-stop(100, #70eaff));
+    background: -moz-linear-gradient(top left, #205555 0%, #70eaff 100%);
+    background: -ms-linear-gradient(top left, #205555 0%, #70eaff 100%);
+    background: -o-linear-gradient(top left, #205555 0%, #70eaff 100%);
+    background: linear-gradient(to bottom right, #205555 0%, #70eaff 100%);
+    border-radius: 5px 5px 0 0;
+    padding: 20px;
+    color: #f6f6f6;
+    
+
+
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.pheader {
+    text-align: center;
+    font-family: "fantasy", "Lucida Console", "Courier New", monospace;
+}
+
+.product-list {
+    margin-bottom: 40px;
+}
+
+.pheader h2 {
+    color: #34495e;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+    transition: background-color 0.3s;
+}
+
+.product:hover {
+    background-color: #f0f0f0;
+}
+
+.product span {
+    font-size: 1em;
+    color: #555;
+}
+
+.product span:first-child {
+    font-weight: bold;
+    color: #2c3e50;
+}
+.sidebar {
+    width: 200px;
+    background-color: #99c1c7 ;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+    color: #2c3e50;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.head {
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195a8), color-stop(100, #70eaff));
+    background: -moz-linear-gradient(top left, #205555 0%, #70eaff 100%);
+    background: -ms-linear-gradient(top left, #205555 0%, #70eaff 100%);
+    background: -o-linear-gradient(top left, #205555 0%, #70eaff 100%);
+    background: linear-gradient(to bottom right, #205555 0%, #70eaff 100%);
+    border-radius: 5px 5px 0 0;
+    padding: 20px;
+    color: #f6f6f6;
+}
+
+.header img {
+    vertical-align: middle;
+}
+
+.imghead {
+    vertical-align: middle;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title h2 {
+    color: #34495e;
+    font-size: 1.5em;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group input[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+button {
+    padding: 12px;
+    background-color: #525bec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    width: 200px;
+    align-self: center;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #525bec;
+}
+
+
+
+
+
+.sort {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.sort label {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.sort select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    
+}
+
+

@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #f4f7f9;
+    padding: 20px;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 300px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#searchBar {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 600px;
+    margin-right: 20px;
+    z-index: 5;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #99c1c7 ;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+
+}
+
+.sidebar h2 {
+    text-align: center;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+    color: #2c3e50;
+    font-size: 1.5em;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    background-color: #444;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.header {
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195a8), color-stop(100, #70eaff));
+    background: -moz-linear-gradient(top left, #205555 0%, #70eaff 100%);
+    background: -ms-linear-gradient(top left, #205555 0%, #70eaff 100%);
+    background: -o-linear-gradient(top left, #205555 0%, #70eaff 100%);
+    background: linear-gradient(to bottom right, #205555 0%, #70eaff 100%);
+    border-radius: 5px 5px 0 0;
+    padding: 20px;
+    color: #f6f6f6;
+
+
+
+}
+.header h1 {
+    color: #2c3e50;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+
+.container h1 {
+    text-align: center;
+    color: #2c3e50;
+    padding: 20px;
+
+}
+
+.sort-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+
+}
+
+.sort-controls label {
+    font-weight: bold;
+    color: #34495e;
+    font-size: 0.9em;
+
+}
+
+
+
+
+.sort-controls select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.sort-controls select:focus {
+    border-color: #205555;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(32, 85, 85, 0.2);
+}
+
+.sort-controls input[type="radio"] {
+    margin: 0 5px 0 15px;
+}
+.sort-controls  button {
+    padding: 10px 20px;
+    background-color: #205555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s, salam 0.2s;
+}
+
+.sort-controls button:hover {
+    background-color: #2c3e50;
+    transform: scale(1.05);
+}
+
+
+#orderTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.9em;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+#orderTable th,
+#orderTable td{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd
+}
+
+
+
+#orderTable th {
+    background-color: #7abcc6;
+    color: white;
+    font-weight: bold;
+
+}
+#orderTable tr:last-child td {
+    border-bottom: none;
+}
+
+#orderTable tr:hover {
+    background-color: #f1f5f9;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+    }
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .sidebar ul li {
+        flex: 1 1 100%;
+    }
+    #searchBar {
+        max-width: 100%;
+    }
+    .sort {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #orderTable {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container h2 {
+        font-size: 1.2em;
+    }
+    .sort button {
+        width: 100%;
+    }
+}
+
+

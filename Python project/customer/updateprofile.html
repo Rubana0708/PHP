@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Update Profile</title>
+        <link rel="stylesheet" href="uprofile.css" />
+    <style>
+        body {
+            background-image: url(https://m.media-amazon.com/images/I/71mHv9f8GsL.jpg);
+            background-size: 300px ;
+        }
+    
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>My profile</h1>
+            <div class="imgcontainter">
+                <h2>Profile image</h2>
+                <img
+                    src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o="
+                    alt="image"
+                    width="100px"
+                    height="100px" />
+                <input type="file" accept="image/jpeg" />
+            </div>
+            <form class="uprofile" action="update_profile.php" method="POST">
+                <div class="form-group">
+                    <label for="username"><b>Username:</b></label>
+                    <input type="text" placeholder="Enter Username" />
+                    <br />
+                    <label for="opassword"><b>Password:</b></label>
+                    <input type="text" placeholder="Enter Password" />
+                    <br />
+                    <label for="npassword"><b>New Password</b></label>
+                    <input type="text" placeholder="Enter New Password" />
+                    <br />
+                    <label for="contactNumber"><b>Contact Number:</b></label>
+                    <input type="tel" maxlength="8" placeholder="Enter Contact Number" />
+                    <br />
+                    <label for="address"><b>Address:</b></label>
+                    <input type="text" placeholder="Enter Address" />
+                </div>
+                <div class="button">
+                    <button type="button" class="cancel">Cancel</button>
+                    <button type="submit" class="save">Save</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

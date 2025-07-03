@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>STAFF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Smile and Sunshine Staff Management
+        <img
+                        src="https://odoocdn.com/openerp_website/static/src/img/icons/blue_rocket.svg"
+                        width="80px"
+                        class="mt-n8 me-n5"
+                        alt="rocket"
+                        loading="lazy" /> 
+        </h1>
+        <input type="text" id="searchBar" placeholder="Search...">
+    </header>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <h2>Staff Menu</h2>
+            <ul>
+                <li><a href="Main.html">Add Product</a></li>
+                <li><a href="MaterialInfo.html">Add Material</a></li>
+                <li><a href="update.html">Update Order</a></li>
+                <li><a href="Generate.html">Generate Report</a></li>
+                <li><a href="Delete.html">Delete Product</a></li>
+            </ul>
+        </aside>
+        
+        <form class="main1">
+            <h2>Insert Item's Information</h2>
+
+            <fieldset>
+                <legend>Product Information</legend>
+                <label for="Product Name">Product Name:</label>
+                <input type="text" id="ProductName" name="ProductName"><br />
+
+                <label for="ProductDescription">Product Description:</label>
+                <textarea id="productDescription" name="productDescription"></textarea><br />
+
+                <label for="productImage">Product Image:</label>
+                <input type="file" id="productImage" name="productIamge"><br />
+
+                <label for="singleProductCost">Single Product Cost:</label>
+                <input type="number" id="SingleProductCost" name="singleProductCost">
+            </fieldset>
+            
+
+
+
+            <h3>Material Details</h3>
+
+            <fieldset>
+                <legend>Material Information</legend>
+                <div id="materials">
+                    <div>
+                        <label for="materialID">Material ID:</label>
+                        <input type="number" id="materialID" name="materialID[]"><br />
+
+                        <label for="materialQuantity">Material Quantity:</label>
+                        <input type="number" min="1" max="3" id="materialQuantity[]">
+
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <div>
+                <button type="button" onclick="addMaterial()">Add Material</button>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+</body>
+
+</html>
