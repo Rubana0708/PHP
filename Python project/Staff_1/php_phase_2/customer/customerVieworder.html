@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Order Records</title>
+        <link rel="stylesheet" href="customerVieworder.css">
+    </head>
+    <body>
+        <div class="container">
+         <header class="header">
+                <h1>
+                    Smile & Sunshine Toy Co. Ltd.
+                    <img
+                        src="https://odoocdn.com/openerp_website/static/src/img/icons/blue_rocket.svg"
+                        width="80px"
+                        class="mt-n8 me-n5"
+                        alt="rocket"
+                        loading="lazy" />
+                </h1>
+                <input type="text" id="searchBar" placeholder="Search..." />
+        </header>
+        
+             
+            <aside class="sidebar">
+            <h2>Customer Menu</h2>
+            <ul>
+                <li><a href="customerOrder.html">Place Order</a></li>
+                <li><a href="customerVieworder.html">View Order</a></li>
+                <li><a href="customerDelete.html">Delete Product</a></li>
+                <li><a href="updateprofile.html">Update Profile</a></li>
+                
+            </ul>
+       
+            </aside>
+            <h1>View Order Records</h1>
+        
+        <div class="sort">
+            <div>
+                <label for="sort-column">Sort By:</label>
+                <select id="sort-column" name="sort-column">
+                    <option value="order_id">Order ID</option>
+                    <option value="order_date">Order Date</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="sort">
+            <label for="sort-order">Order:</label>
+            <select id="sort-order" name="order-order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+        </div>
+        </div>
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Order Date</th>
+                    <th>Customer ID</th>
+                    <th>Product ID</th>
+                    <th>Order Quantity</th>
+                    <th>Order Cost</th>
+                    <th>Order Delivery Date</th>
+                    <th>Order Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr>
+                    <td>ORD001</td>
+                    <td>2025-01-21</td>
+                    <td>CUS123</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>$150.00</td>
+                    <td>2025-01-24</td>
+                    <td>Complete</td>
+                </tr>
+                <tr>
+                    <td>ORD002</td>
+                    <td>2025-03-20</td>
+                    <td>CUS123</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>$240.00</td>
+                    <td>2025-03-23</td>
+                    <td>Pending</td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </body>
+</html>

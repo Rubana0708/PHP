@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Delete Order</title>
+        <link rel="stylesheet" href="customerDelete.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>
+                    Smile & Sunshine Toy Co. Ltd.
+                    <img
+                        src="https://odoocdn.com/openerp_website/static/src/img/icons/blue_rocket.svg"
+                        width="80px"
+                        class="mt-n8 me-n5"
+                        alt="rocket"
+                        loading="lazy" />
+                </h1>
+                <input type="text" id="searchBar" placeholder="Search..." />
+        </header>
+        
+            
+            <aside class="sidebar">
+            <h2>Customer Menu</h2>
+            <ul>
+                <li><a href="customerOrder.html">Place Order</a></li>
+                <li><a href="customerVieworder.html">View Order</a></li>
+                <li><a href="customerDelete.html">Delete Product</a></li>
+                <li><a href="updateprofile.html">Update Profile</a></li>
+                
+            </ul>
+        </aside>
+            <h1>Delete Order</h1>
+        </div>
+        <table class="delete-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Order Date</th>
+                    <th>Product ID</th>
+                    <th>Order Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                <tr>
+                    <td>ORD002</td>
+                    <td>2025-03-20</td>
+                    <td>3</td>
+                    <td>Pending</td>
+                    <td><button class="delete-btn" onclick="confirmDelete(this, 101, true)">Delete</button></td>
+                    
+                    
+                    
+                    
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

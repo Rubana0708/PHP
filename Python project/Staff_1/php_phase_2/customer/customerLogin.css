@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+.Login {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+
+h1 {
+    position: absolute; 
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 450px;
+    font-size: 1.8em;
+}
+
+
+.login-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.imgcontainter {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.imgcontainter img {
+    border-radius: 50%;
+    border: 2px solid #3498db;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container label {
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+.container input[type="text"]:focus,
+.container input[type="password"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.container input::placeholder {
+    color: #999;
+}
+
+
+.container label input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+
+button {
+    padding: 12px;
+    background-color: #4046ae;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #525bec;
+}
+
+
+.container[style*="background-color"] {
+    background-color: #e8f8f5 !important;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.password {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.password a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.password a:hover {
+    text-decoration: underline;
+}
+
+
